@@ -215,6 +215,4 @@ song-lyrics-finder/
 
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
 
----
-
-This README provides a comprehensive overview of your project, explaining its purpose, features, technologies used, and how to get started. It also includes a detailed description of the project structure and key components, which will help users and contributors understand how the application works.
+Thank you for using the Song lyrics finder website!
