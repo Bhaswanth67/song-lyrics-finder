@@ -1,6 +1,4 @@
-Certainly! Here is a detailed README.md for your project, explaining the structure, technologies used, and how they work together:
 
----
 
 # Song Lyrics Finder
 
