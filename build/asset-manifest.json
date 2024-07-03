@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/song-lyrics-finder/static/css/main.128735d4.css",
+    "main.js": "/song-lyrics-finder/static/js/main.a9da6622.js",
+    "static/js/453.aef42a49.chunk.js": "/song-lyrics-finder/static/js/453.aef42a49.chunk.js",
+    "static/media/image.jpg": "/song-lyrics-finder/static/media/image.b827933f217d35e1e60e.jpg",
+    "index.html": "/song-lyrics-finder/index.html",
+    "main.128735d4.css.map": "/song-lyrics-finder/static/css/main.128735d4.css.map",
+    "main.a9da6622.js.map": "/song-lyrics-finder/static/js/main.a9da6622.js.map",
+    "453.aef42a49.chunk.js.map": "/song-lyrics-finder/static/js/453.aef42a49.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.128735d4.css",
+    "static/js/main.a9da6622.js"
+  ]
+}

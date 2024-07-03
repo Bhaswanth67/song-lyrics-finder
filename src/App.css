@@ -1,0 +1,239 @@
+/* General Styles */
+.App {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(./images/image.jpg) no-repeat center center fixed; /* Background image */
+  background-size: cover; /* Cover the entire viewport */
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  transition: background-color 0.3s, color 0.3s; /* Smooth theme transition */
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 100%;
+  max-width: 600px; /* Center card and limit width */
+  box-sizing: border-box; /* Ensure padding is included in the width */
+  position: relative; /* To position the animation */
+  z-index: 1; /* Ensure card is above animation */
+  text-align: center; /* Center align content inside the card */
+}
+
+/* Header Styling */
+h1 {
+  font-family: "Fredoka One", cursive;
+  color: #1e2a38; /* Darker navy blue */
+  font-size: 3.5rem; /* Larger heading */
+  margin-bottom: 1.5rem;
+  padding: 10px;
+  background: linear-gradient(45deg, #ff6b6b, #ffcc00); /* Gradient background */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow for better readability */
+  border-radius: 10px;
+  display: inline-block;
+}
+
+/* Lyrics Area Styles */
+pre {
+  font-size: 16px;
+  white-space: pre-wrap;
+  overflow: auto; /* Scroll if text overflows */
+  margin-top: 1rem; /* Space above lyrics */
+}
+
+/* Light Theme for lyrics area */
+.App.light-theme .lyrics-area {
+  background-color: rgba(255, 255, 255, 0.8); /* Light background */
+  color: #000000; /* Dark text */
+  border: 2px solid #1e2a38; /* Darker border */
+}
+
+/* Dark Theme for lyrics area */
+.App.dark-theme .lyrics-area {
+  background-color: rgba(34, 34, 34, 0.8); /* Dark background */
+  color: #ffffff; /* Light text */
+  border: 2px solid #ffffff; /* Light border */
+}
+
+/* Theme Toggle Container Styles */
+.theme-toggle-container {
+  display: flex;
+  flex-direction: column; /* Stack toggle switch and search box vertically */
+  align-items: center; /* Center horizontally */
+  margin-bottom: 20px; /* Space between toggle switch and search box */
+}
+
+/* Theme Toggle Styles */
+.theme-toggle {
+  display: flex;
+  align-items: center; /* Center toggle vertically */
+  justify-content: center; /* Center toggle horizontally */
+  padding: 8px; /* Adjust padding for better alignment */
+  border: 2px solid #1e2a38; /* Box border color */
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+  box-sizing: border-box; /* Ensure padding is included in the width */
+  text-align: center; /* Center text horizontally */
+  margin-bottom: 20px; /* Gap between toggle switch and search box */
+}
+
+/* Theme Toggle Switch Styles */
+.theme-toggle input[type="checkbox"] {
+  appearance: none;
+  background-color: #ccc;
+  width: 40px; /* Adjust the width based on the box size */
+  height: 20px; /* Adjust the height based on the box size */
+  border-radius: 10px; /* Adjust the border-radius based on the box size */
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s;
+  margin-right: 10px; /* Space between switch and label */
+}
+
+.theme-toggle input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  width: 16px; /* Adjust the width based on the box size */
+  height: 16px; /* Adjust the height based on the box size */
+  border-radius: 50%;
+  background-color: white;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s;
+}
+
+.theme-toggle input[type="checkbox"]:checked {
+  background-color: #0056b3;
+}
+
+.theme-toggle input[type="checkbox"]:checked::before {
+  transform: translateX(20px); /* Adjust the translation based on the box size */
+}
+
+/* Popup Styles */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.popup.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.popup-content h2 {
+  margin: 0 0 15px;
+  font-size: 1.5rem;
+}
+
+.popup-content button {
+  background-color: #0056b3;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.popup-content button:hover {
+  background-color: #004494;
+}
+
+/* Common styles for the lyrics area */
+.lyrics-area {
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 1rem; /* Space above lyrics */
+}
+
+/* Centered Form */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align items */
+  margin-bottom: 1rem; /* Space between form elements */
+}
+
+.form-control {
+  width: 100%;
+  max-width: 500px; /* Max width for better readability */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #1e2a38; /* Darker border */
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus {
+  border-color: #ff6b6b; /* Pink border on focus */
+  box-shadow: 0 0 8px rgba(255, 107, 107, 0.5); /* Light pink shadow on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Search Button Styles */
+.btn-search {
+  background-color: #ffcc00; /* Pink background */
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  max-width: 500px; /* Align with input width */
+}
+
+.btn-search:hover {
+  background-color: #ff6b6b; /* Darker pink on hover */
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Watch on YouTube Button Styles */
+.btn-youtube {
+  display: inline-block;
+  background-color: #ffcc00; /* Yellow background */
+  color: #000;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 2px solid #ffcc00; /* Yellow border */
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.btn-youtube:hover {
+  background-color: #ff6b6b; /* Pink background on hover */
+  color: #fff; /* White text on hover */
+  border-color: #ff6b6b; /* Pink border on hover */
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
